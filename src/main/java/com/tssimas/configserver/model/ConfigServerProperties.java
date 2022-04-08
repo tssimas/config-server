@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@ConfigurationProperties("m2m-config-server.security")
+@ConfigurationProperties("config-server.security")
 public class ConfigServerProperties {
 
     private final List<ApplicationClient> clients = new ArrayList<>();
