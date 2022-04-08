@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      name: ${spring.application.name}
+      fail-fast: true
+      server:
+        bootstrap: true
+        git:
+          uri: https://github.com/tssimas/config.git
+          #username: username
+          #password: password
+          defaultLabel: master
+          basedir: '${user.home}/${spring.application.name}/default'
+          timeout: 10
+          cloneOnStart: true
+          forcePull: true
+encrypt:
+  key-store:
+    location: classpath:/config-server.jks
+    password: q3K%SN9Y@YFJc4q2
+    alias: config-server
+    secret: q3K%SN9Y@YFJc4q2
