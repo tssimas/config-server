@@ -11,7 +11,7 @@ spring:
           uri: https://github.com/tssimas/config.git
           #username: username
           #password: password
-          defaultLabel: master
+          default-label: main
           basedir: '${user.home}/${spring.application.name}/default'
           timeout: 10
           cloneOnStart: true
